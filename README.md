@@ -11,3 +11,5 @@ Repositório com as atividades práticas desenvolvidas ao longo da disciplina de
 ## Projeto
 
 ## Exercícios Extras
+
+- [Jogo da Velha](ExerciciosExtra/JogoDaVelha/)
