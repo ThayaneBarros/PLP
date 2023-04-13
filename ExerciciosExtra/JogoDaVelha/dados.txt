@@ -1,0 +1,1 @@
+[Jogador "Felipe" 0,Jogador "Maria Eduarda" 0,Jogador "Rayane" 1,Jogador "Iasmim" 2,Jogador "Thayane" 1]
