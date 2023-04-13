@@ -8,4 +8,6 @@ Repositório com as atividades práticas desenvolvidas ao longo da disciplina de
 
 ## Paradigma Lógico
 
+## Projeto
+
 ## Exercícios Extras
