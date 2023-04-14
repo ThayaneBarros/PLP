@@ -10,6 +10,8 @@ Repositório com as atividades práticas desenvolvidas ao longo da disciplina de
 
 ## Projeto
 
+- [Batalha Naval](https://github.com/EduardaFarias/Projeto-PLP)
+
 ## Exercícios Extras
 
 - [Jogo da Velha](ExerciciosExtra/JogoDaVelha/)
