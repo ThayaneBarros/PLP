@@ -24,6 +24,9 @@ main = do
               arq <- openFile "dados.txt" ReadMode;
               dados <- hGetLine arq;
               hClose arq;
+              imprimiIntroducao
+              putStrLn ("\nPressione <Enter> para continuar")
+              getChar
               menu (read dados);
               return ()
             }
@@ -32,6 +35,9 @@ main = do
               arq <- openFile "dados.txt" WriteMode;
               hPutStrLn arq "[]";
               hClose arq;
+              imprimiIntroducao
+              putStrLn ("\nPressione <Enter> para continuar")
+              getChar
               menu [];
               return ()
             }
@@ -42,12 +48,10 @@ main = do
 -- função que exibe o Menu
 menu :: Jogadores -> IO Jogadores
 menu dados = do
-                imprimiIntroducao
                 system "clear" -- limpa a tela
                 putStrLn "--------------------Batalha Naval--------------------"
                 putStrLn "\nDigite 1 para cadastrar jogador"
                 putStrLn "\nDigite 2 para jogar"
-                putStrLn "\nDigite 3 para redimensionar o tabuleiro"
                 putStrLn "\nDigite 0 para sair"
                 putStr "\nOpção: "
                 op <- getChar
@@ -65,14 +69,14 @@ imprimiIntroducao = do
 imprimiTextoLentamente :: Handle -> IO ()
 imprimiTextoLentamente handle = do
   texto <- hGetContents handle
-  printTextSlowlyHelper texto
+  imprimiTextoLentamenteAux texto
 
-printTextSlowlyHelper :: String -> IO ()
-printTextSlowlyHelper [] = return ()
-printTextSlowlyHelper (x:xs) = do
+imprimiTextoLentamenteAux :: String -> IO ()
+imprimiTextoLentamenteAux [] = return ()
+imprimiTextoLentamenteAux (x:xs) = do
   putStr [x]
   threadDelay 50000 -- intervalo de 50 milissegundos
-  printTextSlowlyHelper xs
+  imprimiTextoLentamenteAux xs
 
 
 -- função para manipular a opção escolhida pelo usuário
@@ -119,4 +123,19 @@ existeJogador :: Jogadores -> String -> Bool
 existeJogador dados nome = False
 
 prepararJogo :: Jogadores -> IO Jogadores
-prepararJogo dados = menu dados
+prepararJogo dados = do
+                      system "clear"
+                      putStrLn "--------------------Batalha Naval--------------------"
+                      putStrLn "\nDigite 1 para jogar com a máquina"
+                      putStrLn "\nDigite 2 para jogar com dois jogadores"
+                      putStrLn "\nDigite 3 para redimensionar o tabuleiro"
+                      putStrLn "\nDigite 0 para voltar ao menu"
+                      putStr "\n\nOpção: "
+                      op <- getChar
+                      executarOpcaoJogo dados op
+
+executarOpcaoJogo :: Jogadores -> Char -> IO Jogadores
+executarOpcaoJogo dados '0' = menu dados
+executarOpcaoJogo dados '1' = menu dados 
+executarOpcaoJogo dados '2' = menu dados
+executarOpcaoJogo dados '3' = menu dados
