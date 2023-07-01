@@ -6,7 +6,17 @@ Repositório com as atividades práticas desenvolvidas ao longo da disciplina de
 
 ## Paradigma Funcional
 
+- [Prática 1](PraticasFuncional/Pratica%20Funcional%2001/)
+- [Prática 2](PraticasFuncional/Pratica%20Funcional%2002/)
+- [Prática 3](PraticasFuncional/Pratica%20Funcional%2003/)
+- [Prática 4](PraticasFuncional/PraticaFuncional%2004/)
+
 ## Paradigma Lógico
+
+- [Prática 1](PraticasLogica/PraticaLogica01/)
+- [Prática 2](PraticasLogica/PraticaLogica02/)
+- [Prática 3](PraticasLogica/PraticaLogica03/)
+- [Prática 4](PraticasLogica/PraticaLogica04/)
 
 ## Projeto
 
