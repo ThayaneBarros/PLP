@@ -10,7 +10,8 @@ Repositório com as atividades práticas desenvolvidas ao longo da disciplina de
 
 ## Projeto
 
-- [Batalha Naval](https://github.com/EduardaFarias/Projeto-PLP)
+- [Batalha Naval em Haskell](https://github.com/EduardaFarias/Projeto-PLP)
+- [Batalha Naval em Prolog](https://github.com/rayaneBSilva/Batalha-Naval-Minado-Prolog)
 
 ## Exercícios Extras
 
